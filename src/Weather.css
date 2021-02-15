@@ -1,5 +1,5 @@
 .Weather {
-  margin: 20px;
+  margin: 20px auto;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius: 5px;
   margin-top: 5%;
@@ -8,9 +8,9 @@
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
-.Weather .search-bar {
+.Weather form {
   text-align: center;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .Weather .button-geolocation {
