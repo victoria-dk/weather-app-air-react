@@ -1,4 +1,7 @@
 import React from "react";
+
+import WeatherIcon from "./WeatherIcon.js";
+
 import "./Weather.css";
 
 export default function Weather() {
@@ -54,6 +57,7 @@ export default function Weather() {
         <li>Sunday 12:00</li>
         <li>Sunny</li>
       </ul>
+      <WeatherIcon />
       <div className="row">
         <div className="col-6">-20°C</div>
         <div className="col-6">
