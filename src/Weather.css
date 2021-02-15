@@ -7,3 +7,42 @@
   padding: 30px;
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.3);
 }
+
+.Weather .search-bar {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.Weather .button-geolocation {
+  border: none;
+  background: transparent;
+  color: #5a6276;
+}
+
+.Weather .button-geolocation:focus {
+  outline: none;
+}
+
+.Weather .input-search {
+  background: #fff;
+  opacity: 0.5;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  height: 35px;
+  padding: 10px;
+}
+
+.Weather .input-search:focus {
+  outline: none;
+}
+
+.Weather .button-search {
+  border: none;
+  background: transparent;
+  color: #5a6276;
+}
+
+.Weather .button-search:focus {
+  outline: none;
+}
