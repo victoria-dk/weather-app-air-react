@@ -11,6 +11,31 @@
   margin-bottom: 15px;
 }
 
+.Weather h1,
+h2,
+h3,
+li,
+p {
+  color: #5a6276;
+}
+
+.Weather h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.Weather p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Weather li {
+  list-style: none;
+  text-align: left;
+  font-size: 22px;
+}
+
 .Weather .button-geolocation {
   border: none;
   background: transparent;
@@ -43,4 +68,26 @@
 
 .Weather .button-search:focus {
   outline: none;
+}
+
+.Weather img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  float: left;
+}
+
+.Weather .temperature {
+  font-size: 100px;
+  color: #5a6276;
+  line-height: 1;
+  font-weight: 450;
+}
+
+.Weather .units {
+  font-size: 20px;
+  color: #5a6276;
+  position: relative;
+  top: -50px;
 }

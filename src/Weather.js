@@ -55,9 +55,12 @@ export default function Weather() {
         <li>Sunday 12:00</li>
         <li>Sunny</li>
       </ul>
-      <WeatherIcon />
       <div className="row">
-        <div className="col-6">-20°C</div>
+        <div className="col-6">
+          <WeatherIcon />
+          <span className="temperature">-20</span>
+          <span className="units">°C</span>
+        </div>
         <div className="col-6">
           <ul>
             <li>Pressure: 1011 hPa</li>
