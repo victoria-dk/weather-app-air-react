@@ -9,3 +9,30 @@ body {
   max-width: 750px;
   margin: 20px auto;
 }
+
+.App footer {
+  margin: 10px;
+}
+
+h1,
+h2,
+h3,
+li,
+p {
+  color: #5a6276;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  font-size: 22px;
+}
