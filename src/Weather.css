@@ -73,9 +73,7 @@ p {
 .Weather img {
   width: 150px;
   height: 150px;
-  display: block;
-  margin: 0 auto;
-  float: left;
+  margin: 10px auto;
 }
 
 .Weather .temperature {
@@ -85,7 +83,7 @@ p {
   font-weight: 450;
 }
 
-.Weather .units {
+.Weather .unit {
   font-size: 20px;
   color: #5a6276;
   position: relative;
