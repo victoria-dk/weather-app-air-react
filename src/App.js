@@ -8,7 +8,14 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Copenhagen" />
         <footer>
-          Coded by Victoria Nielsen 👩‍💻{" "}
+          Coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/victorianielsen89/"
+            target="_blank"
+          >
+            Victoria Nielsen
+          </a>{" "}
+          👩‍💻 and is{" "}
           <a
             href="https://github.com/victoria-dk/weather-app-air-react"
             target="_blank"
