@@ -31,7 +31,7 @@ export default function CurrentDate(props) {
   }
   return (
     <div>
-      {day} {date} {month} {year} {sunrise} {sunset} {hours}:{minutes}
+      {day} {date} {month} {year} {hours}:{minutes}
     </div>
   );
 }
