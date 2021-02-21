@@ -1,5 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
+import DayTime from "./DayTime";
 import WeatherIcon from "./WeatherIcon.js";
 import WeatherTemperature from "./WeatherTemperature";
 
@@ -25,6 +26,16 @@ export default function WeatherInfo(props) {
 
             <div className="float-left">
               <WeatherTemperature celsius={props.data.temperature} />
+            </div>
+            <div className="daytime">
+              <ul>
+                <li>
+                  Sunrise: <DayTime time={props.data.sunrise} />
+                </li>
+                <li>
+                  Sunset: <DayTime time={props.data.sunset} />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
