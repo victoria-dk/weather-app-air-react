@@ -3,7 +3,7 @@ h2,
 h3,
 li,
 p {
-  color: #5a6276;
+  color: #224e6c;
 }
 
 .WeatherInfo h3 {
@@ -29,6 +29,11 @@ p {
   margin: 10px auto;
 }
 
+.WeatherInfo .overview {
+  padding-top: 20px;
+  margin: 10px;
+}
+
 .WeatherInfo .current-location h1 {
   text-transform: capitalize;
   font-size: 40px;
@@ -39,6 +44,7 @@ p {
 .WeatherInfo .current-date-time {
   text-align: left;
   display: block;
+  padding-left: 2px;
 }
 
 .WeatherInfo .current-date-time ul {
@@ -50,17 +56,22 @@ p {
 }
 
 .WeatherInfo .temperature {
-  font-size: 70px;
-  color: #5a6276;
+  font-size: 80px;
+  color: #224e6c;
   line-height: 1;
   font-weight: 450;
 }
 
 .WeatherInfo .unit {
-  font-size: 20px;
-  color: #5a6276;
+  font-size: 25px;
+  color: #224e6c;
   position: relative;
   top: -50px;
+}
+
+.WeatherInfo .unit a {
+  color: #224e6c;
+  font-weight: bold;
 }
 
 .WeatherInfo .suntime {
@@ -70,4 +81,11 @@ p {
 
 .WeatherInfo .suntime li {
   font-size: 15px;
+}
+
+.WeatherInfo .weather-details {
+  padding-left: 0;
+}
+.WeatherInfo .weather-details ul {
+  margin-left: -50px;
 }

@@ -8,16 +8,18 @@ import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="current-location">
-        <h1>{props.data.city}</h1>
-      </div>
-      <div className="current-date-time">
-        <ul>
-          <li>
-            <CurrentDate date={props.data.date} />
-          </li>
-          <li className="text-capitalize">{props.data.description}</li>
-        </ul>
+      <div className="overview">
+        <div className="current-location">
+          <h1>{props.data.city}</h1>
+        </div>
+        <div className="current-date-time">
+          <ul>
+            <li>
+              <CurrentDate date={props.data.date} />
+            </li>
+            <li className="text-capitalize">{props.data.description}</li>
+          </ul>
+        </div>
       </div>
       <div className="row mt-3">
         <div className="col-4">
@@ -37,7 +39,8 @@ export default function WeatherInfo(props) {
           <div className="daytime">
             <ul className="suntime">
               <li>
-                Sunrise: <DayTime time={props.data.sunrise} />
+                Sunrise:
+                <DayTime time={props.data.sunrise} />
               </li>
               <li>
                 Sunset:
@@ -47,7 +50,7 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className="col-4">
-          <ul>
+          <ul className="weather-details">
             <li>Wind: {Math.round(props.data.wind)} km/h</li>
             <li>Feels like: {Math.round(props.data.feels)} °C</li>
             <li>Humidity: {props.data.humidity} %</li>

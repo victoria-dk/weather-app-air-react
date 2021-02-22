@@ -7,17 +7,17 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
-    let timezone = response.data.timezone;
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: new Date((response.data.dt + timezone) * 1000),
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       temperature: response.data.main.temp,
-      sunrise: new Date((response.data.sys.sunrise + timezone) * 1000),
-      sunset: new Date((response.data.sys.sunset + timezone) * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
       wind: response.data.wind.speed,
       feels: response.data.main.feels_like,
       humidity: response.data.main.humidity,
