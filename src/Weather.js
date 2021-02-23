@@ -11,6 +11,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      forecast: response.data,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -22,6 +23,8 @@ export default function Weather(props) {
       feels: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
     });
   }
 
@@ -40,11 +43,6 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function getCurrentLocation(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(searchLocation);
-  }
-
   function searchLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -52,6 +50,11 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
   if (weatherData.ready) {
@@ -109,7 +112,7 @@ export default function Weather(props) {
         <div className="forecast-division">
           <hr />
         </div>
-        <WeatherForecast city={weatherData.city} />
+        <WeatherForecast lat={weatherData.lat} lon={weatherData.lon} />
       </div>
     );
   } else {

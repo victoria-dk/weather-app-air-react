@@ -11,8 +11,9 @@ export default function DayTime(props) {
     minutes = `0${minutes}`;
   }
   return (
-    <div>
+    <span>
+      {" "}
       {hours}:{minutes}
-    </div>
+    </span>
   );
 }

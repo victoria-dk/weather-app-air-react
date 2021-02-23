@@ -55,6 +55,15 @@ p {
   font-size: 16px;
 }
 
+.WeatherInfo .row .first-col {
+  padding-right: 0;
+  padding-left: 15 px;
+}
+
+.WeatherInfo .row .second-col {
+  padding-left: 0;
+}
+
 .WeatherInfo .temperature {
   font-size: 80px;
   color: #224e6c;
@@ -67,6 +76,7 @@ p {
   color: #224e6c;
   position: relative;
   top: -50px;
+  font-weight: bold;
 }
 
 .WeatherInfo .unit a {
@@ -75,16 +85,17 @@ p {
 }
 
 .WeatherInfo .suntime {
-  padding-left: 0;
+  padding-left: 50;
   margin-bottom: 0;
 }
 
 .WeatherInfo .suntime li {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .WeatherInfo .weather-details {
   padding-left: 0;
+  line-height: 37px;
 }
 .WeatherInfo .weather-details ul {
   margin-left: -50px;

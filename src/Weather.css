@@ -44,3 +44,7 @@
 .Weather .button-search:focus {
   outline: none;
 }
+
+.Weather .forecast-division hr {
+  margin-top: 0;
+}

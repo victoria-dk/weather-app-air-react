@@ -2,23 +2,24 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastPreview(props) {
-  function hours() {
-    let date = new Date(props.data.dt * 1000);
-    let hours = date.getHours();
-    return `${hours}:00`;
-  }
-
-  function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-
-    return `${temperature}°C`;
+  function formatDay() {
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let dayIndex = new Date(props.data.dt * 1000).getDay();
+    let day = days[dayIndex];
+    return day;
   }
 
   return (
     <div className="WeatherForecastPreview col">
-      {hours()}
+      {formatDay()}
       <WeatherIcon code={props.data.weather[0].icon} />
-      {temperature()}
+      <span className="temperatures">
+        <strong>{Math.round(props.data.temp.min)}</strong>°
+        <span className="min-temps">
+          <span className="divider">|</span>
+          {Math.round(props.data.temp.max)}°{" "}
+        </span>
+      </span>
     </div>
   );
 }
