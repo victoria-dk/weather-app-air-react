@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import "./WeatherForecastPreview.css";
 
 export default function WeatherForecastPreview(props) {
   function formatDay() {
@@ -10,7 +11,7 @@ export default function WeatherForecastPreview(props) {
   }
 
   return (
-    <div className="WeatherForecastPreview col">
+    <div className="WeatherForecastData col">
       {formatDay()}
       <WeatherIcon code={props.data.weather[0].icon} />
       <span className="temperatures">
