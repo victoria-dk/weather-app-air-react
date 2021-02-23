@@ -5,10 +5,10 @@ import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
-  const [forecast, serForecast] = useState(null);
+  const [forecast, setForecast] = useState(null);
 
   function handleForecastResponse(response) {
-    serForecast(response.data);
+    setForecast(response.data);
     setLoaded(true);
   }
 
